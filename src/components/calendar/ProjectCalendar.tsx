@@ -92,10 +92,10 @@ const ProjectCalendar: React.FC = () => {
           onSelect={setSelectedDate}
           className="rounded-md border"
           components={{
-            DayContent: ({ day }) => (
+            DayContent: (props) => (
               <>
-                {day.day}
-                {renderDayContent(day.date)}
+                {props.date.getDate()}
+                {renderDayContent(props.date)}
               </>
             ),
           }}
